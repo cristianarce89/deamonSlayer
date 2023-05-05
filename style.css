@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color_primario: #ffffff;
+    --color_segundario: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Berkshire Swash', cursive, 'Kaushan Script', cursive;
+    background-color: var(--color_segundario);
+}
+
+.navbar {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px var(--color_primario);
+    margin: 1rem 0;
+}
+
+.navbar__ul {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    width: 90%;
+    padding-bottom: 1rem;
+}
+
+.navbar__ul--li.item{
+    height: auto;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.navbar__ul--li img {
+    z-index: -2;
+    width: 6rem;
+    height: 100%;
+}
+
+/* Estilos para los enlaces */
+.flaming-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--color_primario);
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+}
+
+.flaming-link:hover {
+    color: #e0d9d9;
+    transition: color 0.2s ease-in-out; /* transición suave */
+}
+
+/* Capa de fondo en el pseudo-elemento ::after */
+.flaming-link::after {
+    height: auto;
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://assets.stickpng.com/images/580b585b2edbce24c47b2654.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+/* Animación de llamas */
+.flaming-link:hover::after {
+    opacity: .8;
+    animation: flames .7s linear;
+}
+
+@keyframes flames {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: .8;
+    }
+}
