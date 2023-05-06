@@ -95,3 +95,76 @@ html {
         opacity: .8;
     }
 }
+
+.contenedor__temporadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    color: var(--color_primario);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.temporadas__img {
+    width: 250px;
+    height: 280px;
+    margin: 60px;
+}
+
+.titulo.personajes {
+    margin-bottom: 40px;
+}
+
+.personajes__img.tanjiro {
+    width: 400px;
+    height: 250px;
+    margin-left: 380px;
+}
+
+.contenedor__descripcion {
+    display: flex;
+}
+
+.descripcion--tanjiro {
+    color: var(--color_primario);
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.contenedor__descripcion--tanjiro {
+    width: 250px;
+    height: 480px;
+    margin-left: 100px;
+}
+
+.personajes__img2.tanjiro {
+    width: 250px;
+    height: 350px;
+    margin-top: 12px;
+}
+
+.nombre--tanjiro {
+    color: var(--color_primario);
+    font-size: 80px;
+    position: absolute;
+    top: 320px;
+    left: 380px;
+    width: 600px;
+    z-index: 1; /* para asegurarse de que el h1 esté por encima del otro contenido */
+}
+
+.contenedor__descripcion div {
+    position: relative;
+}
+
+.nombre--tanjiro.senitzu {
+    width: 800px;
+}
+
+.nombre--tanjiro.inosuke {
+    width: 800px;
+}
