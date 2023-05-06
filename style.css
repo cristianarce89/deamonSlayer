@@ -11,17 +11,17 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Berkshire Swash', cursive, 'Kaushan Script', cursive;
+    font-family: 'Berkshire Swash', cursive, 'Courgette', cursive;
     background-color: var(--color_segundario);
 }
 
 .navbar {
     width: 100%;
-    height: 5rem;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 1px var(--color_primario);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
     margin: 1rem 0;
 }
 
@@ -33,7 +33,7 @@ html {
     padding-bottom: 1rem;
 }
 
-.navbar__ul--li.item{
+.navbar__ul--li.item {
     height: auto;
     list-style: none;
     font-size: 1.3rem;
@@ -41,8 +41,8 @@ html {
 
 .navbar__ul--li img {
     z-index: -2;
-    width: 6rem;
-    height: 100%;
+    width: 15rem;
+    height: 10rem;
 }
 
 /* Estilos para los enlaces */
@@ -53,12 +53,13 @@ html {
     color: var(--color_primario);
     text-decoration: none;
     position: relative;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .flaming-link:hover {
     color: #e0d9d9;
-    transition: color 0.2s ease-in-out; /* transición suave */
+    transition: color 0.2s ease-in-out;
+    /* transición suave */
 }
 
 /* Capa de fondo en el pseudo-elemento ::after */
@@ -88,9 +89,11 @@ html {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: .8;
     }
@@ -99,30 +102,103 @@ html {
 .contenedor__temporadas {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.contenedor__temporadas--a{
+    position: relative;
+    display: inline-block;
+    padding: 1px 1px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.contenedor__temporadas--a:hover{
+background: #a945c7;
+box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+transition-delay: 1s;
+}
+
+.contenedor__temporadas--a span{
+    position: absolute;
+    display: block;
+}
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#a945c7);
+ }
+ .contenedor__temporadas--a:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#a945c7);
+}
+.contenedor__temporadas--a:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#a945c7);
+}
+.contenedor__temporadas--a:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#a945c7);
+}
+.contenedor__temporadas--a:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
 }
 
 .titulo {
     color: var(--color_primario);
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
     margin-top: 20px;
 }
 
 .temporadas__img {
-    width: 250px;
-    height: 280px;
-    margin: 60px;
+    width: 310px;
+    height: 380px;
 }
 
 .titulo.personajes {
     margin-bottom: 40px;
 }
 
-.personajes__img.tanjiro {
-    width: 400px;
-    height: 250px;
+.personajes__img {
+    width: 600px;
+    height: 450px;
     margin-left: 380px;
+    border-radius: 15px;
+    filter: contrast(120%) saturate(120%);
 }
 
 .contenedor__descripcion {
@@ -131,30 +207,120 @@ html {
 
 .descripcion--tanjiro {
     color: var(--color_primario);
-    font-size: 13px;
-    font-family: sans-serif;
+    font-size: 18px;
+    font-family: Courgette;
 }
 
 .contenedor__descripcion--tanjiro {
     width: 250px;
-    height: 480px;
+    height: auto;
     margin-left: 100px;
 }
 
-.personajes__img2.tanjiro {
+
+.personajes__img2 {
     width: 250px;
     height: 350px;
     margin-top: 12px;
+    border-radius: 15px;
+    filter: contrast(120%) saturate(120%);
 }
+
+.personajes__img.tanjiro{
+    box-shadow: 0 0 30px rgb(252, 3, 169);
+}
+
+.personajes__img.nezuko{
+    box-shadow: 0 0 30px rgb(231, 93, 201);
+}
+
+.personajes__img.senitzu{
+    box-shadow: 0 0 30px rgb(90, 3, 124);
+}
+
+.personajes__img.inosuke{
+    box-shadow: 0 0 30px rgb(26, 3, 151);
+}
+
+.personajes__img.muzan{
+    box-shadow: 0 0 30px rgb(158, 6, 6);
+}
+
+.personajes__img2.tanjiro {
+    box-shadow: 0 0 30px rgb(54, 89, 247);
+}
+
+.personajes__img2.nezuko {
+    box-shadow: 0 0 30px rgb(241, 31, 154);
+}
+
+.personajes__img2.senitzu {
+    box-shadow: 0 0 30px rgb(233, 141, 37);
+}
+
+.personajes__img2.inosuke {
+    box-shadow: 0 0 30px rgb(191, 192, 194);
+}
+
+.personajes__img2.muzan {
+    box-shadow: 0 0 30px rgb(67, 2, 70);
+}
+
 
 .nombre--tanjiro {
     color: var(--color_primario);
     font-size: 80px;
     position: absolute;
-    top: 320px;
-    left: 380px;
+    top: 470px;
+    left: 550px;
     width: 600px;
-    z-index: 1; /* para asegurarse de que el h1 esté por encima del otro contenido */
+    z-index: 1;
+    /* para asegurarse de que el h1 esté por encima del otro contenido */
+}
+
+.espada__img1 {
+    width: 450px;
+    height: 80px;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.espada__img2 {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.espada__img3 {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.espada__img4 {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.espada__img5 {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px black;
+    border-radius: 2px;
 }
 
 .contenedor__descripcion div {
