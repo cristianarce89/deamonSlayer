@@ -13,6 +13,7 @@ html {
     font-size: 62.5%;
     font-family: 'Berkshire Swash', cursive, 'Courgette', cursive;
     background-color: var(--color_segundario);
+    color: var(--color_primario);
 }
 
 .navbar {
@@ -106,7 +107,7 @@ html {
     margin: 50px 0;
 }
 
-.contenedor__temporadas--a{
+.contenedor__temporadas--a {
     position: relative;
     display: inline-block;
     padding: 1px 1px;
@@ -118,60 +119,67 @@ html {
     transition: 0.2s;
 }
 
-.contenedor__temporadas--a:hover{
-background: #a945c7;
-box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-transition-delay: 1s;
+.contenedor__temporadas--a:hover {
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
 }
 
-.contenedor__temporadas--a span{
+.contenedor__temporadas--a span {
     position: absolute;
     display: block;
 }
 
-#span1{
+#span1 {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent,#a945c7);
- }
- .contenedor__temporadas--a:hover #span1{
+    background: linear-gradient(90deg, transparent, #a945c7);
+}
+
+.contenedor__temporadas--a:hover #span1 {
     left: 100%;
     transition: 1s;
 }
- #span3{
+
+#span3 {
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent,#a945c7);
+    background: linear-gradient(270deg, transparent, #a945c7);
 }
-.contenedor__temporadas--a:hover #span3{
+
+.contenedor__temporadas--a:hover #span3 {
     right: 100%;
     transition: 1s;
     transition-delay: 0.5s;
 }
-#span2{
+
+#span2 {
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent,#a945c7);
+    background: linear-gradient(180deg, transparent, #a945c7);
 }
-.contenedor__temporadas--a:hover #span2{
+
+.contenedor__temporadas--a:hover #span2 {
     top: 100%;
     transition: 1s;
     transition-delay: 0.25s;
 }
-#span4{
+
+#span4 {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent,#a945c7);
+    background: linear-gradient(360deg, transparent, #a945c7);
 }
-.contenedor__temporadas--a:hover #span4{
+
+.contenedor__temporadas--a:hover #span4 {
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.75s;
@@ -226,23 +234,23 @@ transition-delay: 1s;
     filter: contrast(120%) saturate(120%);
 }
 
-.personajes__img.tanjiro{
+.personajes__img.tanjiro {
     box-shadow: 0 0 30px rgb(252, 3, 169);
 }
 
-.personajes__img.nezuko{
+.personajes__img.nezuko {
     box-shadow: 0 0 30px rgb(231, 93, 201);
 }
 
-.personajes__img.senitzu{
+.personajes__img.senitzu {
     box-shadow: 0 0 30px rgb(90, 3, 124);
 }
 
-.personajes__img.inosuke{
+.personajes__img.inosuke {
     box-shadow: 0 0 30px rgb(26, 3, 151);
 }
 
-.personajes__img.muzan{
+.personajes__img.muzan {
     box-shadow: 0 0 30px rgb(158, 6, 6);
 }
 
@@ -333,4 +341,60 @@ transition-delay: 1s;
 
 .nombre--tanjiro.inosuke {
     width: 800px;
+}
+
+
+.contenedor__info {
+    width: 150rem;
+    height: 90rem;
+    background-image: url(./imagenes/varios.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    margin: 0 auto;
+}
+
+.contenedor__info--div {
+    position: relative;
+    top:300px;
+    width: 519px;
+    height: 611px;
+    border: 1px solid #fafafa10;
+    background: #fafafa10;
+    backdrop-filter: blur(1px);
+    margin: 0 auto;
+}
+
+.contenedor__info--p {
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    margin: 60px;
+}
+
+.footer__contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12rem;
+    background-color: #fafafa10;
+    margin-top: 70px;
+    font-size: 15px;
+    font-family: Courgette;
+}
+
+.footer__contenedor--politicas {
+    display: flex;
+    width: 40rem;
+    justify-content: space-around;
+}
+
+.footer__contenedor--logos i {
+    margin: 5px;
+}
+
+.footer__logo--kimetsu {
+    width: 8rem;
+    height: 8rem;
 }
