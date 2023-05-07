@@ -350,13 +350,13 @@ html {
     background-image: url(./imagenes/varios.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:contain;
+    background-size: contain;
     margin: 0 auto;
 }
 
 .contenedor__info--div {
     position: relative;
-    top:300px;
+    top: 300px;
     width: 519px;
     height: 611px;
     border: 1px solid #fafafa10;
